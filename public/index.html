@@ -1,0 +1,112 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show me!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Homemade+Apple"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <p class="logo">Daily Postcard Creator</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="page">
+        <label for="fileChooser" id="img-btn" class="container">
+          <img id="serverImage" />
+          <div class="centered">Choose Image</div>
+        </label>
+        <!-- <div> <label for="fileChooser" class="bottom">Replace Image</div> -->
+        <input
+          type="file"
+          id="fileChooser"
+          accept="image/png, .jpeg, .jpg, image/gif"
+        />
+        <div class="verticle-line"></div>
+        <div onchange="messages()" id="message" contenteditable="true">
+          Write your message here!
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="font-body">
+        <p class="para1">Choose your font</p>
+        <button
+          type="button"
+          onclick="changefont('Indie Flower')"
+          class="indi btn1 b1"
+        >
+          Indie Flower
+        </button>
+        <button
+          type="button"
+          onclick="changefont('Dancing Script')"
+          class="danci btn1 b1"
+        >
+          Dancing Script
+        </button>
+        <button
+          type="button"
+          onclick="changefont('Long Cang')"
+          class="long btn1 b1"
+        >
+          Long Cang
+        </button>
+        <button
+          type="button"
+          onclick="changefont('Homemade Apple')"
+          class="home btn1 b1"
+        >
+          Homemade Apple
+        </button>
+      </div>
+
+      <div class="para_color">
+        <p class="para">Choose your color</p>
+        <div class="colors">
+          <a onclick="changecolor('a')" id="a" class="box">#e6e2cf</a>
+          <a onclick="changecolor('b')" id="b" class="box">#dbcaac</a>
+          <a onclick="changecolor('c')" id="c" class="box">#c9cbb3</a>
+          <a onclick="changecolor('d')" id="d" class="box">#bbc9ca</a>
+          <a onclick="changecolor('e')" id="e" class="box">#a6a5b5</a>
+          <a onclick="changecolor('f')" id="f" class="box">#b5a6ab</a>
+          <a onclick="changecolor('g')" id="g" class="box">#eccfcf</a>
+          <a onclick="changecolor('h')" id="h" class="box">#eceeeb</a>
+          <a onclick="changecolor('i')" id="i" class="box">#bab9b5</a>
+        </div>
+      </div>
+      <div>
+        <a href="display.html"
+          ><button class="share" type="button">Share postcard</button></a
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
